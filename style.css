@@ -1,0 +1,518 @@
+/* ==========================================
+   STYLE COMMUN - Palais de l'Illusion
+   ========================================== */
+
+/* Réglages de base de la page */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0f1b3d;
+  background: #ffffff;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 1.05;
+  margin: 10px 0 20px 0;
+}
+
+h2 {
+  font-size: 34px;
+  margin: 0 0 15px 0;
+}
+
+h3 {
+  font-size: 18px;
+  margin: 0 0 8px 0;
+}
+
+p {
+  margin: 0 0 15px 0;
+}
+
+/* ==========================================
+   EN-TÊTE (logo + menu + bouton)
+   ========================================== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 5%;
+  border-bottom: 1px solid #e5eaf0;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.1;
+}
+
+.logo small {
+  font-weight: normal;
+  font-size: 12px;
+  color: #5b6880;
+  margin-left: 12px;
+  padding-left: 12px;
+  border-left: 1px solid #ccd3de;
+}
+
+.menu a {
+  margin: 0 12px;
+  font-size: 14px;
+  padding-bottom: 4px;
+}
+
+.menu a.actif {
+  font-weight: bold;
+  border-bottom: 2px solid #0f1b3d;
+}
+
+/* ==========================================
+   BOUTONS
+   ========================================== */
+.btn {
+  display: inline-block;
+  background: #0f1b3d;
+  color: #ffffff;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid #0f1b3d;
+}
+
+.btn-blanc {
+  background: #ffffff;
+  color: #0f1b3d;
+  border: 1px solid #ffffff;
+}
+
+.btn-contour {
+  background: #ffffff;
+  color: #0f1b3d;
+  border: 1px solid #0f1b3d;
+}
+
+.lien {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* ==========================================
+   HERO (grand bandeau du haut)
+   ========================================== */
+.hero {
+  display: flex;
+  background: #f4f7fa;
+}
+
+.hero-texte {
+  flex: 1;
+  padding: 60px 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-texte .surtitre {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.hero-texte p {
+  font-size: 15px;
+  max-width: 380px;
+}
+
+.hero-texte .btn {
+  align-self: flex-start;
+  margin-top: 10px;
+}
+
+.hero-image {
+  flex: 1.2;
+  min-height: 420px;
+  background: #2a8fa0;
+  position: relative;
+}
+
+/* Fondu : la photo s'estompe vers la gauche, dans la couleur du fond */
+.hero-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 40%;
+  background: linear-gradient(to right, #f4f7fa, rgba(244, 247, 250, 0));
+}
+
+/* ==========================================
+   SECTION "À LA UNE"
+   ========================================== */
+.section {
+  padding: 60px 5%;
+}
+
+.une {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.une-texte {
+  flex: 1;
+}
+
+.une-texte p {
+  font-size: 15px;
+}
+
+.cartes {
+  flex: 2;
+  display: flex;
+  gap: 20px;
+}
+
+.carte {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.carte-image {
+  height: 160px;
+  background: #cfd8e3;
+}
+
+.carte-texte {
+  padding: 16px;
+}
+
+.carte-texte p {
+  font-size: 13px;
+  margin: 0;
+}
+
+/* ==========================================
+   SECTION "NOS EXPÉRIENCES"
+   ========================================== */
+.fond-gris {
+  background: #f4f7fa;
+}
+
+.experiences {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.experiences-texte {
+  flex: 1;
+}
+
+.experiences-texte p {
+  font-size: 15px;
+}
+
+.experiences-colonnes {
+  flex: 2;
+  display: flex;
+}
+
+.exp-colonne {
+  flex: 1;
+  text-align: center;
+  padding: 0 25px;
+  border-left: 1px solid #dde3ea;
+}
+
+.exp-colonne:first-child {
+  border-left: none;
+}
+
+.exp-icone {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.exp-colonne h3 {
+  font-size: 15px;
+}
+
+.exp-colonne p {
+  font-size: 13px;
+  color: #3d4a63;
+}
+
+/* ==========================================
+   BANDEAU "PRÊT À VIVRE L'ILLUSION ?"
+   ========================================== */
+.cta {
+  display: flex;
+  margin: 0 5% 60px 5%;
+  background: #0f1b3d;
+  color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 150px;
+}
+
+.cta-texte {
+  flex: 1;
+  padding: 35px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cta-texte h3 {
+  font-size: 22px;
+  margin: 0 0 6px 0;
+}
+
+.cta-texte p {
+  font-size: 14px;
+}
+
+.cta-texte .btn-blanc {
+  align-self: flex-start;
+  margin-top: 10px;
+}
+
+.cta-image {
+  flex: 1;
+  background: #555555;
+  position: relative;
+}
+
+/* Fondu : la photo s'assombrit vers la gauche, dans la couleur du bandeau */
+.cta-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 45%;
+  background: linear-gradient(to right, #0f1b3d, rgba(15, 27, 61, 0));
+}
+
+/* ==========================================
+   PIED DE PAGE
+   ========================================== */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  border-top: 1px solid #e5eaf0;
+  font-size: 13px;
+}
+
+.footer .logo {
+  font-size: 14px;
+}
+
+.footer-liens a {
+  margin: 0 10px;
+  color: #5b6880;
+}
+
+.reseaux a {
+  margin-left: 12px;
+  font-weight: bold;
+}
+
+/* ==========================================
+   PAGE TARIFS
+   ========================================== */
+.titre-page {
+  padding: 50px 5% 20px 5%;
+}
+
+.titre-page .surtitre {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.titre-page p {
+  font-size: 15px;
+  max-width: 380px;
+}
+
+.tarifs {
+  display: flex;
+  gap: 20px;
+  padding: 30px 5% 10px 5%;
+}
+
+.tarif {
+  flex: 1;
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e5eaf0;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tarif.populaire {
+  background: #eaf6f8;
+  border: 1px solid #9fd3dc;
+}
+
+.tarif .badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  margin-left: -65px;
+  width: 130px;
+  text-align: center;
+  background: #0f1b3d;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 5px 0;
+  border-radius: 20px;
+}
+
+.tarif .icone {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.tarif h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.prix {
+  font-size: 44px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.prix small {
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.prix .ligne {
+  display: block;
+  margin-top: 4px;
+}
+
+.tarif .petit {
+  font-size: 12px;
+  color: #3d4a63;
+  min-height: 60px;
+  margin: 10px 0;
+}
+
+.tarif ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 20px 0;
+  font-size: 13px;
+}
+
+.tarif li {
+  margin-bottom: 8px;
+}
+
+.tarif li::before {
+  content: "✓ ";
+  font-weight: bold;
+}
+
+.tarif .btn {
+  margin-top: auto;
+  text-align: center;
+  font-size: 13px;
+}
+
+.infos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 5%;
+  padding: 20px 25px;
+  background: #f4f7fa;
+  border-radius: 12px;
+}
+
+.infos h3 {
+  margin-bottom: 4px;
+}
+
+.infos p {
+  font-size: 13px;
+  margin: 0;
+}
+
+/* ==========================================
+   ADAPTATION TÉLÉPHONE (écrans étroits)
+   ========================================== */
+@media (max-width: 800px) {
+  .header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+
+  .hero,
+  .une,
+  .experiences,
+  .cta,
+  .tarifs,
+  .infos {
+    flex-direction: column;
+  }
+
+  .cartes,
+  .experiences-colonnes {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .exp-colonne {
+    border-left: none;
+    border-top: 1px solid #dde3ea;
+    padding: 20px 0;
+  }
+
+  .exp-colonne:first-child {
+    border-top: none;
+  }
+
+  .cta-image {
+    min-height: 180px;
+  }
+
+  .hero-image {
+    min-height: 260px;
+  }
+}
